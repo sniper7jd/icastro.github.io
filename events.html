@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="styles/events.css">
+    <link rel="stylesheet" href="styles/headfoot.css">
+</head>
+<body>
+     <nav class="navbar">
+        <div class="logo">
+            <img src="images/ursa.svg" alt="Logo" class="logo-image">
+            <span>IC Astronomy Club</span>
+        </div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="events.html">Events</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About Us</a>
+            <a href="signup.html" class="signup">Sign Up</a>
+        </div>
+    </nav>
+
+    <!-- Top Section: Upcoming Events with Modal -->
+    <h2 class="jura">Upcoming Events</h2>
+    <div class="upcoming-row">
+    <div class="event-card" onclick="openModal('modal1')">
+        <img src="images/001.jpg" alt="Event 1">
+        <p>Star Gazing Night</p>
+    </div>
+    <div class="event-card" onclick="openModal('modal2')">
+        <img src="images/event2.avif" alt="Event 2">
+        <p>Astronomy Workshop</p>
+    </div>
+    <div class="event-card" onclick="openModal('modal3')">
+        <img src="images/event3.avif" alt="Event 3">
+        <p>Planetarium Visit</p>
+    </div>
+</div>
+    
+    <!-- Modal for Upcoming Events -->
+    <div id="modal1" class="modal" onclick="closeModal('modal1')">
+        <div class="modal-content" onclick="event.stopPropagation();">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h3>Star Gazing Night</h3>
+            <p>Join us for an unforgettable evening under the stars! Bring your telescope or use ours. Staurday 7pm January 3 Textor 101</p>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal" onclick="closeModal('modal2')">
+        <div class="modal-content" onclick="event.stopPropagation();">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h3>Astronomy Workshop</h3>
+            <p>Learn about constellations, planets, and how to use a telescope in this hands-on workshop. Staurday 7pm January 10 Textor 101</p>
+        </div>
+    </div>
+    <div id="modal3" class="modal" onclick="closeModal('modal3')">
+        <div class="modal-content" onclick="event.stopPropagation();">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h3>Planetarium Visit</h3>
+            <p>Experience the wonders of the cosmos with an immersive visit to the local planetarium. Staurday 7pm January 17 Textor 101</p>
+        </div>
+    </div>
+
+
+    <!-- Bottom Section: Past Events Carousel -->
+    <section class="past-events expletus-sans">
+        <h2>Past Events</h2>
+        <div class="carousel-container">
+            <button class="carousel-btn prev" onclick="scrollCarousel('prev')">❮</button>
+            <div class="carousel">
+                <div class="carousel-item"><img src="images/past1.jpeg" alt="Past Event 1"></div>
+                <div class="carousel-item"><img src="images/past2.jpeg" alt="Past Event 2"></div>
+                <div class="carousel-item"><img src="images/past3.jpeg" alt="Past Event 3"></div>
+                <div class="carousel-item"><img src="images/past4.jpeg" alt="Past Event 4"></div>
+                <div class="carousel-item"><img src="images/past5.jpeg" alt="Past Event 5"></div>
+            </div>
+            <button class="carousel-btn next" onclick="scrollCarousel('next')">❯</button>
+        </div>
+    </section>
+
+    <script src="js/events.js"></script>
+</body>
+</html>

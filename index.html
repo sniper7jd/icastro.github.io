@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.plot.ly/plotly-2.29.1.min.js" charset="utf-8"></script>
+    <title>IC Astronomy Club</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/headfoot.css">
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/ursa.svg" alt="Logo" class="logo-image">
+            <span>IC Astronomy Club</span>
+        </div>
+        
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="events.html">Events</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About Us</a>
+            <a href="signup.html" class="signup">Sign Up</a>
+        </div>
+    </nav>
+    <main>
+    <div class="grid-container">
+        
+        <section class="top-section">
+            <div class="center-text orbitron">
+                <h1>All the Stars are
+                  <span
+                     class="txt-rotate"
+                     data-period="2000"
+                     data-rotate='[ "closer.", "amazing.", "pretty.", "fun." ]'></span>
+                </h1>
+                
+                  <h3>Satellites are cool too.</h3>
+                  <h3>Let's find out together</h3>
+                
+                <button class="explore-btn" onclick="window.open('https://stars.chromeexperiments.com/', '_blank')">Explore The Universe</button>
+
+            </div>
+        </section>
+        
+        <section class="welcome-section">
+            <h2 class="expletus-sans">Welcome to Astronomy Club</h2>
+            <h3 class="space-mono-regular-italic">
+               Welcome to the Ithaca College Astronomy Club! If you’re fascinated by stars, galaxies, and the mysteries of the universe, you’ve come to the right place. Our club is a community for space enthusiasts to explore the cosmos together. We host stargazing events, workshops, and engaging discussions about all things astronomy. Whether you’re a seasoned stargazer or just beginning your journey into the universe, there’s something for everyone. Join us and be part of exciting adventures that bring the wonders of the night sky closer than ever!
+            </h3>
+            <button class="explore-btn" onclick="window.location.href='events.html'">Upcoming Events</button>
+
+        </section>
+        
+        <section class="stars-section">
+        <div class="center-text">
+            <div class="color">
+                <div style="text-align:center">
+                <div id="chart"></div>
+                </div>
+            </div>
+        </div>
+        </section>
+    
+        
+    <footer class="footer">
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social-icon">  
+      <li class="social-icon__item">
+            <a class="social-icon__link" onclick="window.open('https://ithaca.campuslabs.com/engage/organization/astronomyclub', '_blank')">
+            <img src="images/mouse-click-svgrepo-com.svg" alt="IC Engage" class="icon-ic-engage">
+          </a>
+        </li>
+        
+      <li class="social-icon__item"><a class="social-icon__link" onclick="window.open('https://www.instagram.com/icastroclub/', '_blank')">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+    </ul>
+    <ul class="menu">
+      <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+      <li class="menu__item"><a class="menu__link" href="events.html">Events</a></li>
+      <li class="menu__item"><a class="menu__link" href="gallery.html">Gallery</a></li>
+      <li class="menu__item"><a class="menu__link" href="about.html">About Us</a></li>
+      <li class="menu__item"><a class="menu__link" href="signup.html">Sign Up</a></li>
+        
+    </ul>
+    <p>&copy;2024 IC Astronomy Club | All Rights Reserved</p>
+  </footer>
+    </div>
+        
+    <div class="mobile">
+    <div class="top-mobile">
+        <div class="center-text orbitron">
+                <h1>All the Stars are
+                  <span
+                     class="txt-rotate"
+                     data-period="2000"
+                     data-rotate='[ "closer.", "amazing.", "pretty.", "fun." ]'></span>
+                </h1>
+                
+                  <h3>Satellites are cool too.</h3>
+                  <h3>Let's find out together</h3>
+                
+                <button class="explore-btn" onclick="window.open('https://stars.chromeexperiments.com/', '_blank')">Explore The Universe</button>
+
+            </div>
+    </div>
+    <div class="welcome-mobile">
+        <h2 class="expletus-sans">Welcome to Astronomy Club</h2>
+            <h3 class="space-mono-regular-italic">
+               Welcome to the Ithaca College Astronomy Club! If you’re fascinated by stars, galaxies, and the mysteries of the universe, you’ve come to the right place. Our club is a community for space enthusiasts to explore the cosmos together. We host stargazing events, workshops, and engaging discussions about all things astronomy. Whether you’re a seasoned stargazer or just beginning your journey into the universe, there’s something for everyone. Join us and be part of exciting adventures that bring the wonders of the night sky closer than ever!
+            </h3>
+    </div>
+    <div class="stars-mobile">
+        <div class="center-text">
+            <div class="color">
+                <div style="text-align:center">
+                <div id="chart-mobile"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+            
+    </div>
+        
+    </main>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/charts.js"></script>
+    
+        
+</body>
+</html>
