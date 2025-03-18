@@ -1,0 +1,230 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    overflow-x: hidden;
+}
+
+/* Grid container */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "top"
+        "welcome"
+        "stars"
+        "foot";
+    grid-template-rows: 750px 750px 750px 100px; /* Each section is 750px in height */
+    grid-template-columns: 1fr; 
+    width: 100%;
+    height: auto; 
+}
+
+/* Section styles */
+
+.top-section {
+    grid-area: top;
+    height: 100%; 
+}
+
+.welcome-section {
+    grid-area: welcome;
+    height: 100%; 
+}
+
+.stars-section {
+    grid-area: stars;
+    height: 100%; 
+}
+
+.footer {
+    grid-area: foot;
+    height: 100%; 
+}
+
+/* Top section */
+.top-section {
+    background: url('../images/top-section.avif') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    margin-top: -40px;
+}
+
+.top-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* Welcome section */
+.welcome-section {
+    background-color: white; 
+    color: black;
+    padding: 4rem 2rem;
+    text-align: center;
+    line-height: 1.8;
+    margin-top: -40px;
+}
+
+.welcome-section h2 {
+    font-size: 3rem; /* Bigger font size for the heading */
+    font-weight: bold;
+    margin-bottom: 1.5rem; /* Space below the heading */
+}
+
+.welcome-section h3 {
+    font-size: 1.3rem; /* Larger font size for the paragraph */
+    line-height: 2; /* Improved readability with line spacing */
+    max-width: 1000px; /* Limit the width of the paragraph */
+    margin: 0 auto;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+/* Stars section */
+.stars-section {
+    background: url('../images/stars-section.avif') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.stars-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+
+
+
+/* Buttons section */
+
+.explore-btn {
+    background-color: #3586ff; /* Background color of the button */
+    color: white; 
+    border: none; 
+    padding: 15px 30px; /* Add padding for size */
+    font-size: 1.2rem; 
+    border-radius: 30px; 
+    cursor: pointer; 
+    margin-top: 20px; /* Space above the button */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for button */
+.explore-btn:hover {
+    background-color: #2b6bbd; /* Darker shade on hover */
+}
+
+.social-icon__link img.icon-ic-engage {
+  width: 30px; /* Set the width of the icon */
+  height: 30px; 
+  display: inline-block; /* Align it inline with other elements */
+  vertical-align: top; 
+}
+
+
+
+/* General Mobile Styles */
+.mobile {
+    display: none;
+    width: 100%;
+}
+
+/* Top Section - Mobile */
+.top-mobile {
+    background: url('../images/top-section.avif') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.top-mobile h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Welcome Section - Mobile */
+.welcome-mobile {
+    background-color: white;
+    color: black;
+    padding: 3rem 2rem;
+    text-align: center;
+    height: 100vh;
+}
+
+.welcome-mobile h2 {
+    font-size: 5vh;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.welcome-mobile h3 {
+    font-size: 2vh;
+    line-height: 1.8;
+    max-width: 90%;
+    margin: 0 auto;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+/* Stars Section - Mobile */
+.stars-mobile {
+    background: url('../images/stars-section.avif') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    text-align: center;
+}
+
+.stars-mobile h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+    
+    /* Welcome Section - Smaller Text */
+    .welcome-section h2 {
+        font-size: 5vw; /* Smaller heading size */
+    }
+
+    .welcome-section h3 {
+        font-size: 2.1vw; 
+    }
+    
+}
+
+/* Mobile and Tablet View - Column Layout */
+@media screen and (max-width: 768px) {
+    body .grid-container {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+}
+
+
+
+

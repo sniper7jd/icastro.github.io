@@ -1,0 +1,181 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+/* Add gap between navbar and first section */
+.upcoming-events, .past-events {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* Upcoming Events Section */
+.upcoming-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Consistent gap between event cards */
+    margin-top: 20px;
+}
+
+h2 {
+    text-align: center; 
+}
+
+.event-card {
+    position: relative;
+    width: 250px; /* Fixed width */
+    height: 350px; 
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #2c3e50;
+}
+
+.event-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image fits the square */
+}
+
+.event-card p {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px;
+    width: 80%;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: red;
+}
+
+/* Past Events Carousel */
+.past-events {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px; /* Add gap between items */
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    flex: 0 0 500px; /* Match the size of event cards */
+    height: 600px;
+    background-color: #2c3e50;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image fits the square */
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.carousel-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+
+
+
+/* For screens between 768px and 1000px */
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+
+    .menu a {
+        margin-left: 10px;
+        font-size: 14px;
+    }
+    .event-card {
+        width: 30%;
+        height: 300px;
+    }
+    .carousel-item {
+        flex: 0 0 40%;
+        height: 400px;
+    }
+}

@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans:ital,wght@0,400..700;1,400..700&family=Jura:wght@300..700&family=Orbitron:wght@400..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.jura {
+  font-family: "Jura", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.expletus-sans {
+  font-family: "Expletus Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.orbitron {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.space-mono-regular-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+
+
+
+/* Navbar styling */
+.navbar {
+    background: linear-gradient(90deg, #00008b, #000000); /* Gradient color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem; /* Increased padding for height */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo styles */
+.logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.7rem; /* Slightly larger text for logo */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.logo img {
+    width: 50px; /* Larger logo image */
+    height: 50px;
+    margin-right: 0.8rem;
+}
+
+/* Menu styles */
+.menu {
+    display: flex;
+    gap: 2rem; /* More spacing between links */
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem; /* Slightly larger font */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #f4f4f9;
+}
+
+/* Sign Up button */
+.menu .signup {
+    background-color: #ff4d4d;
+    color: white;
+    font-weight: bold;
+}
+
+.menu .signup:hover {
+    background-color: #ff3333;
+}
+
+
+/* Waves section */
+.footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 200px; /* Increased height to accommodate content */
+  padding: 20px 100px 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center; /* Center text in the footer */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 15px; /* Increased margin for better spacing */
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 15px; /* Increased margin for better spacing */
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+    /* Navbar - Display items in two rows */
+    .navbar {
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap onto new lines */
+        justify-content: space-between; /* Space items evenly */
+        padding: 30px 50px; /* Adjust padding for better spacing */
+    }
+
+    /* Logo and Menu positioning */
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%; /* Make logo take full width to move to the first row */
+        margin-bottom: 10px; /* Space below the logo */
+    }
+
+    .logo-image {
+        height: 40px; /* Adjust the logo size */
+        margin-right: 10px;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap; /* Allow menu items to wrap onto the next row */
+        gap: 15px; /* Space between menu items */
+        width: 100%; /* Make the menu take full width */
+        justify-content: center; /* Center the menu items */
+    }
+
+    .menu a {
+        font-size: 16px; /* Adjust font size for readability */
+    }
+
+    /* Adjust spacing and layout for better visual balance */
+    .menu a.signup {
+        margin-top: 10px; /* Add space above the signup button */
+    }
+    
+    
+    .footer .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center menu items */
+        gap: 8px; /* Reduced space between menu items */
+        width: 100%;
+    }
+
+    .footer .menu__item {
+        list-style-type: none; /* Remove default list style */
+    }
+
+    .footer .menu__link {
+        font-size: 16px; /* Adjust font size for readability */
+    }
+
+    /* If there is a need for any other specific adjustments for social icons */
+    .footer .social-icon {
+        display: flex;
+        gap: 10px; /* Adjust the gap between social icons */
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    
+    
+    /* Navbar - Arrange items vertically */
+    .navbar {
+        position: relative; 
+        top: 0; 
+        z-index: 1000; 
+        display: flex;
+        flex-direction: column; /* Stack navbar items vertically */
+        align-items: center; 
+        padding: 10px 0; 
+    }
+
+    /* Logo - Positioned below navbar items */
+    .logo {
+        display: flex;
+        flex-direction: column; /* Stack logo image and text vertically */
+        align-items: center; /* Center-align the logo and text */
+        margin-top: 15px; 
+    }
+
+    .logo-image {
+        height: 40px; /* Adjust the logo size */
+        margin-bottom: 5px; 
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column; /* Stack menu items vertically */
+        gap: 10px; /* Space between menu items */
+        margin-top: 10px; 
+    }
+
+    .menu a {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+    
+}
